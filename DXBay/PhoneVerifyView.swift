@@ -8,31 +8,53 @@
 import SwiftUI
 
 struct PhoneVerifyView: View {
+  let verificationId: String
+  let phoneNumber: String
   @State var text = ""
   @State var isSendDisabled = true
-  @State var isVerifying = false
-  
+  @State var loading = false
+  @FocusState private var isEditing: Bool
+  @EnvironmentObject var core: DXCore
+
   var body: some View {
-    if isVerifying {
+    if loading {
       ProgressView()
     } else {
       VStack(spacing: 40) {
         Spacer()
           .frame(height: 64)
-        TextField("Placeholder", text: $text.max(6))
+        SecureField("token", text: $text.max(6))
+          .multilineTextAlignment(.center)
+          .focused($isEditing)
+          .textContentType(.oneTimeCode)
           .onChange(of: text, {
-            isSendDisabled = text.count < 5
+            isSendDisabled = text.count < 6
           })
           .font(.largeTitle)
-        Button("Verify") {
-          isVerifying = true
+        if loading {
+          ProgressView()
+        } else {
+          Button("Verify") {
+            Task {
+              do {
+                try await DXAuth.verify(verificationId: verificationId, token: text)
+                loading = false
+              } catch let err {
+                loading = false
+                print(err)
+              }
+            }
+          }
+          .disabled(isSendDisabled)
+          .buttonStyle(.borderedProminent)
+          .foregroundColor(.dxPrimary)
+          .tint(.dxSecondary)
+          .controlSize(.extraLarge)
         }
-        .disabled(isSendDisabled)
-        .buttonStyle(.borderedProminent)
-        .foregroundColor(.dxPrimary)
-        .tint(.dxSecondary)
-        .controlSize(.extraLarge)
         Spacer()
+      }
+      .onAppear {
+        isEditing = true
       }
       .padding()
     }
@@ -46,7 +68,7 @@ struct PhoneVerifyView: View {
 }
 
 #Preview {
-  PhoneVerifyView()
+  PhoneVerifyView(verificationId: "", phoneNumber: "")
 }
 
 extension Binding where Value == String {

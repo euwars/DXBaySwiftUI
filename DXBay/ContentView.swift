@@ -24,22 +24,7 @@ struct ContentView: View {
 
         List {
           Section {
-            
-            VStack {
-              HStack {
-                Text("Account Balance")
-                  .font(.headline)
-                Spacer()
-              }
-              HStack {
-                Spacer()
-                Text("123")
-                  .fontDesign(.monospaced)
-                  .font(.title)
-                Text("AED")
-                  .font(.caption2)
-              }
-            }
+            BalanceView(amount: 1323)
           }
           
           Section("Transactions") {
