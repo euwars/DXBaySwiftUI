@@ -46,7 +46,8 @@ struct DXBayApp: App {
   var body: some Scene {
     WindowGroup {
       if core.userID != nil {
-        ContentView()
+        HomeFlow()
+          .environmentObject(core)
       } else {
         OnboardingFlow()
           .onOpenURL { url in

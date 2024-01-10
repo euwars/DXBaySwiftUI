@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BalanceView: View {
   
-  @State var amount: Int
+  let amount: Int?
   
   var body: some View {
     VStack(spacing: 30) {
@@ -20,7 +20,7 @@ struct BalanceView: View {
       }
       HStack {
         Spacer()
-        Text(12332.formatted(.currency(code: "aed")))
+        Text(amount?.formatted(.currency(code: "aed")) ?? "--")
           .fontDesign(.monospaced)
           .font(.title3)
       }

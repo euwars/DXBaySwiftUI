@@ -37,6 +37,7 @@ struct PhoneVerifyView: View {
           Button("Verify") {
             Task {
               do {
+                let _ =
                 try await DXAuth.verify(verificationId: verificationId, token: text)
                 loading = false
               } catch let err {

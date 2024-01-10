@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeListView.swift
 //  DXBay
 //
 //  Created by Farzad Nazifi on 1/8/24.
@@ -7,10 +7,9 @@
 
 import SwiftUI
 
+struct HomeListView: View {
+  @EnvironmentObject var core: DXCore
 
-
-struct ContentView: View {
-  
   let transactions: [Trx] = [
     .init(amount: 130, person: "Tahsin", timeStamp: "2s ago"),
     .init(amount: 532, person: "Ali", timeStamp: "Yesterday"),
@@ -24,7 +23,7 @@ struct ContentView: View {
 
         List {
           Section {
-            BalanceView(amount: 1323)
+            BalanceView(amount: core.user?.balance ?? 0)
           }
           
           Section("Transactions") {
@@ -48,42 +47,12 @@ struct ContentView: View {
         }
         .navigationTitle("DXBay")
         
-        VStack {
-          Spacer()
-          HStack {
-            Button(action: {
-              
-            }, label: {
-              Image(systemName: "arrow.down")
-            })
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .tint(.primary)
-            Button(action: {
-              
-            }, label: {
-              Image(systemName: "arrow.triangle.branch")
-            })
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-            .tint(.primary)
-          }
-        }
+        FloatingButtonView()
       }
     }
   }
 }
 
 #Preview {
-  ContentView()
-}
-
-
-struct PlayerView: View {
-    let name: String
-
-    var body: some View {
-        Text("Selected player: \(name)")
-            .font(.largeTitle)
-    }
+  HomeListView()
 }

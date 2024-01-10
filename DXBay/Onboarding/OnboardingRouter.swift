@@ -28,26 +28,3 @@ final class OnboardingRouter: ObservableObject {
     navPath.removeLast(navPath.count)
   }
 }
-
-final class HomeRouter: ObservableObject {
-  public enum Destination: Codable, Hashable {
-    case home
-    case card
-    case send
-    case split
-  }
-  
-  @Published var navPath = NavigationPath()
-  
-  func navigate(to destination: Destination) {
-    navPath.append(destination)
-  }
-  
-  func navigateBack() {
-    navPath.removeLast()
-  }
-  
-  func navigateToRoot() {
-    navPath.removeLast(navPath.count)
-  }
-}
