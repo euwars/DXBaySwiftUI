@@ -73,7 +73,10 @@ class DXCore: ObservableObject {
     let filter = transactions.whereFilter(.)
     
     
-    trxListenRegistraion = db.collection("transactions").whereFilter(Filter.orFilter([
+    trxListenRegistraion = db.collection("transactions")
+      .whereFilter(Filter.orFilter([
+      Filter.whereField("state", isEqualTo: "CA"),
+      Filter.whereField("state", isEqualTo: "CA")
     ])
 
 
