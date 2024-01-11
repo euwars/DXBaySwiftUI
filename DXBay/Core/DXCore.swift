@@ -22,6 +22,7 @@ class DXCore: ObservableObject {
   @Published var userID: String?
   var ref: DatabaseReference!
   @Published var user: DXUser?
+  @Published var transactions: [Trx] = []
   
   init() {
     Auth.auth().settings?.isAppVerificationDisabledForTesting = true
@@ -70,16 +71,30 @@ class DXCore: ObservableObject {
     let db = Firestore.firestore()
     let transactions = db.collection("transactions")
     
-    let filter = transactions.whereFilter(.)
-    
-    
     trxListenRegistraion = db.collection("transactions")
       .whereFilter(Filter.orFilter([
-      Filter.whereField("state", isEqualTo: "CA"),
-      Filter.whereField("state", isEqualTo: "CA")
-    ])
+        Filter.whereField("state", isEqualTo: "CA"),
+        Filter.whereField("state", isEqualTo: "CA")
+      ]))
+      .addSnapshotListener({ documentSnapshot, error in
+        guard let document = documentSnapshot else {
+          print("Error fetching document: \(error!)")
+          return
+        }
+                
+        self.transactions = document.documents.compactMap { snapshot in
+          let result = Result { try snapshot.data(as: Trx.self) }
 
-
+          switch result {
+          case .success(let trxEntry):
+            return trxEntry
+          case .failure(let failure):
+            print(failure)
+            return nil
+          }
+        }
+      })
+    
   }
   
   func logout() {
