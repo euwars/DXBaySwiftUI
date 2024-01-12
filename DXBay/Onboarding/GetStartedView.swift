@@ -9,27 +9,21 @@ import SwiftUI
 
 struct GetStartedView: View {
   @EnvironmentObject var router: OnboardingRouter
-
+  
   var body: some View {
-    NavigationStack {
-      VStack {
-        Spacer()
-        Text("DXPay")
-          .font(.largeTitle)
-          .fontWeight(.bold)
-        
-        Text("Split and get paid")
-          .font(.footnote)
-        Spacer()
-        Button("Get Started") {
-          router.navigate(to: .sendToken)
-        }
-        .buttonStyle(.borderedProminent)
-        .foregroundColor(.dxPrimary)
-        .tint(.dxSecondary)
-        .controlSize(.extraLarge)
+    VStack(spacing: 8) {
+      Spacer()
+      
+      CustomText(text: "DXPay",style: .title)
+      CustomText(text: "Split and get paid", style: .body)
+      
+      Spacer()
+      
+      CustomButton(label: "Get Started", sizeStyle: .fill) {
+        router.navigate(to: .sendToken)
       }
     }
+    .safeAreaPadding()
   }
 }
 

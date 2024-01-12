@@ -14,15 +14,12 @@ struct BalanceView: View {
   var body: some View {
     VStack(spacing: 30) {
       HStack {
-        Text("Account Balance")
-          .font(.headline)
+        CustomText(text: "Account balance", style: .subTitle2)
         Spacer()
       }
       HStack {
         Spacer()
-        Text(amount?.formatted(.currency(code: "aed")) ?? "--")
-          .fontDesign(.monospaced)
-          .font(.title3)
+        CustomText(text: amount?.formatted(.currency(code: "AED")) ?? "--", style: .title)
       }
     }
   }

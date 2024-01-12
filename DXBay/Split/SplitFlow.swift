@@ -1,14 +1,14 @@
 //
-//  HomeFlow.swift
+//  SplitFlow.swift
 //  DXBay
 //
-//  Created by Farzad Nazifi on 1/10/24.
+//  Created by Farzad Nazifi on 1/12/24.
 //
 
 import SwiftUI
 
-struct HomeFlow: View {
-  @ObservedObject var router = HomeRouter()
+struct SplitFlow: View {
+  @ObservedObject var router = SplitRouter()
   
   var body: some View {
     NavigationStack(path: $router.navPath) {
@@ -18,13 +18,10 @@ struct HomeFlow: View {
           
         }
     }
-    .sheet(isPresented: $router.showProfile) {
-      ProfileView()
-    }
     .environmentObject(router)
   }
 }
 
 #Preview {
-  HomeFlow()
+  SplitFlow()
 }

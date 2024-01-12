@@ -19,22 +19,22 @@ struct PhoneVerifyView: View {
   var body: some View {
     if loading {
       ProgressView()
+      
     } else {
       VStack(spacing: 40) {
         Spacer()
           .frame(height: 64)
-        SecureField("token", text: $text.max(6))
+        CustomInputField(text: $text.max(6), isFocused: $isEditing, label: "token")
           .multilineTextAlignment(.center)
-          .focused($isEditing)
+
           .textContentType(.oneTimeCode)
           .onChange(of: text, {
             isSendDisabled = text.count < 6
           })
-          .font(.largeTitle)
         if loading {
           ProgressView()
         } else {
-          Button("Verify") {
+          CustomButton(label: "Verify", isDisabled: isSendDisabled) {
             Task {
               do {
                 let _ =
@@ -46,11 +46,6 @@ struct PhoneVerifyView: View {
               }
             }
           }
-          .disabled(isSendDisabled)
-          .buttonStyle(.borderedProminent)
-          .foregroundColor(.dxPrimary)
-          .tint(.dxSecondary)
-          .controlSize(.extraLarge)
         }
         Spacer()
       }

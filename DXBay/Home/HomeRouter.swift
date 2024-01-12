@@ -15,6 +15,8 @@ final class HomeRouter: ObservableObject {
     case split
   }
   
+  @Published var showProfile: Bool = false
+  
   @Published var navPath = NavigationPath()
   
   func navigate(to destination: Destination) {
@@ -23,6 +25,10 @@ final class HomeRouter: ObservableObject {
   
   func navigateBack() {
     navPath.removeLast()
+  }
+  
+  func toggleProfile() {
+    showProfile.toggle()
   }
   
   func navigateToRoot() {

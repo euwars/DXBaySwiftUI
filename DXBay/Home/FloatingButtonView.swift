@@ -12,22 +12,13 @@ struct FloatingButtonView: View {
     VStack {
       Spacer()
       HStack {
-        Button(action: {
+        CustomButton(label: "Gimme", image: "arrow.down") {
           
-        }, label: {
-          Image(systemName: "arrow.down")
-        })
-        .buttonStyle(.borderedProminent)
-        .controlSize(.large)
-        .tint(.primary)
-        Button(action: {
+        }
+      
+        CustomButton(label: "Split", image: "arrow.triangle.branch") {
           
-        }, label: {
-          Image(systemName: "arrow.triangle.branch")
-        })
-        .buttonStyle(.borderedProminent)
-        .controlSize(.large)
-        .tint(.primary)
+        }
       }
     }
   }

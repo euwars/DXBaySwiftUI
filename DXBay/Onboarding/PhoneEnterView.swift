@@ -17,7 +17,7 @@ struct PhoneEnterView: View {
   @State var isSendDisabled = true
   @State var phoneEditing = true
   @State var loading = false
-  
+  @FocusState var isFocused
   @State var cleanNumber = ""
   
   var body: some View {
@@ -26,11 +26,10 @@ struct PhoneEnterView: View {
         .frame(height: 64)
       iPhoneNumberField("00 000 0000", text: $text, isEditing: $phoneEditing)
         .defaultRegion("AE")
-      
         .multilineTextAlignment(.center)
         .flagHidden(false)
         .flagSelectable(true)
-        .font(UIFont(size: 30, weight: .medium, design: .monospaced))
+        .font(UIFont(size: 24, weight: .medium, design: .monospaced))
         .onNumberChange(perform: { number in
           guard number?.numberString != nil else {
             isSendDisabled = true
@@ -43,7 +42,7 @@ struct PhoneEnterView: View {
       if loading {
         ProgressView()
       } else {
-        Button("Send Text Message") {
+        CustomButton(label: "Send text message", isDisabled: isSendDisabled) {
           loading = true
           Task {
             do {
@@ -56,11 +55,6 @@ struct PhoneEnterView: View {
             }
           }
         }
-        .disabled(isSendDisabled)
-        .buttonStyle(.borderedProminent)
-        .foregroundColor(.dxPrimary)
-        .tint(.dxSecondary)
-        .controlSize(.extraLarge)
       }
 
       Spacer()

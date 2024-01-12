@@ -12,6 +12,12 @@
 		8001D7292B4C16E20065C303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8001D7282B4C16E20065C303 /* Assets.xcassets */; };
 		8001D72D2B4C16E20065C303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8001D72C2B4C16E20065C303 /* Preview Assets.xcassets */; };
 		8001D7342B4C23930065C303 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8001D7332B4C23930065C303 /* Models.swift */; };
+		806B367F2B515EB9009ABEAA /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B367E2B515EB9009ABEAA /* CustomAvatar.swift */; };
+		806B36822B515F27009ABEAA /* HomeTransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36812B515F27009ABEAA /* HomeTransactionCell.swift */; };
+		806B36852B5162B6009ABEAA /* SplitFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36842B5162B6009ABEAA /* SplitFlow.swift */; };
+		806B36872B5162E1009ABEAA /* SplitAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36862B5162E1009ABEAA /* SplitAmountView.swift */; };
+		806B368A2B516326009ABEAA /* SplitInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36892B516326009ABEAA /* SplitInfoView.swift */; };
+		806B368D2B516673009ABEAA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B368C2B516673009ABEAA /* ProfileView.swift */; };
 		80D238E62B4E9C5100F90E2E /* OnboardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D238E52B4E9C5100F90E2E /* OnboardingRouter.swift */; };
 		80D238E82B4E9D8A00F90E2E /* OnboardingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D238E72B4E9D8A00F90E2E /* OnboardingFlow.swift */; };
 		80D238EA2B4EA2E200F90E2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80D238E92B4EA2E200F90E2E /* GoogleService-Info.plist */; };
@@ -31,6 +37,11 @@
 		80F93A852B4C324A00D30361 /* PhoneEnterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93A842B4C324A00D30361 /* PhoneEnterView.swift */; };
 		80F93A882B4C328700D30361 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 80F93A872B4C328700D30361 /* iPhoneNumberField */; };
 		80F93A8C2B4C387500D30361 /* PhoneVerifyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93A8B2B4C387500D30361 /* PhoneVerifyView.swift */; };
+		80F93AA92B51104B00D30361 /* SplitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93AA82B51104B00D30361 /* SplitRouter.swift */; };
+		80F93AAE2B5112EA00D30361 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93AAD2B5112EA00D30361 /* CustomButton.swift */; };
+		80F93AB22B511CC900D30361 /* CustomInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93AB12B511CC900D30361 /* CustomInputField.swift */; };
+		80F93AB42B511FCB00D30361 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93AB32B511FCB00D30361 /* View.swift */; };
+		80F93AB72B51257400D30361 /* CustomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80F93AB62B51257400D30361 /* CustomText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +52,16 @@
 		8001D72A2B4C16E20065C303 /* DXBay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DXBay.entitlements; sourceTree = "<group>"; };
 		8001D72C2B4C16E20065C303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8001D7332B4C23930065C303 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		806B367E2B515EB9009ABEAA /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
+		806B36812B515F27009ABEAA /* HomeTransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTransactionCell.swift; sourceTree = "<group>"; };
+		806B36842B5162B6009ABEAA /* SplitFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitFlow.swift; sourceTree = "<group>"; };
+		806B36862B5162E1009ABEAA /* SplitAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitAmountView.swift; sourceTree = "<group>"; };
+		806B36892B516326009ABEAA /* SplitInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInfoView.swift; sourceTree = "<group>"; };
+		806B368C2B516673009ABEAA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		80D238E52B4E9C5100F90E2E /* OnboardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingRouter.swift; sourceTree = "<group>"; };
 		80D238E72B4E9D8A00F90E2E /* OnboardingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFlow.swift; sourceTree = "<group>"; };
 		80D238E92B4EA2E200F90E2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		80D238EB2B4EA62000F90E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80D238EB2B4EA62000F90E2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80D238EC2B4EB77600F90E2E /* BalanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceView.swift; sourceTree = "<group>"; };
 		80D238F52B4EF50A00F90E2E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		80D238F72B4EF52B00F90E2E /* HomeFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlow.swift; sourceTree = "<group>"; };
@@ -54,6 +71,11 @@
 		80F93A782B4C29F600D30361 /* DXCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DXCore.swift; sourceTree = "<group>"; };
 		80F93A842B4C324A00D30361 /* PhoneEnterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneEnterView.swift; sourceTree = "<group>"; };
 		80F93A8B2B4C387500D30361 /* PhoneVerifyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneVerifyView.swift; sourceTree = "<group>"; };
+		80F93AA82B51104B00D30361 /* SplitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitRouter.swift; sourceTree = "<group>"; };
+		80F93AAD2B5112EA00D30361 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		80F93AB12B511CC900D30361 /* CustomInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputField.swift; sourceTree = "<group>"; };
+		80F93AB32B511FCB00D30361 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		80F93AB62B51257400D30361 /* CustomText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +116,11 @@
 		8001D7232B4C16E10065C303 /* DXBay */ = {
 			isa = PBXGroup;
 			children = (
-				80D238EB2B4EA62000F90E2E /* Info.plist */,
-				8001D7242B4C16E10065C303 /* DXBayApp.swift */,
 				80D238F22B4EF4AA00F90E2E /* Core */,
+				806B368B2B516666009ABEAA /* Profile */,
+				80F93AB52B511FD200D30361 /* Extensions */,
+				80F93AAC2B5112E300D30361 /* Components */,
+				80F93AA72B51103C00D30361 /* Split */,
 				80D238F42B4EF4EC00F90E2E /* Onboarding */,
 				80D238F32B4EF4DA00F90E2E /* Home */,
 				8001D7332B4C23930065C303 /* Models.swift */,
@@ -116,9 +140,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		806B368B2B516666009ABEAA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				806B368C2B516673009ABEAA /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		80D238F22B4EF4AA00F90E2E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				80D238EB2B4EA62000F90E2E /* Info.plist */,
+				8001D7242B4C16E10065C303 /* DXBayApp.swift */,
 				80F93A782B4C29F600D30361 /* DXCore.swift */,
 				80D238FD2B4EF7B400F90E2E /* DXAuth.swift */,
 			);
@@ -133,6 +167,7 @@
 				8001D7262B4C16E10065C303 /* HomeListView.swift */,
 				80D238FB2B4EF6E000F90E2E /* FloatingButtonView.swift */,
 				80D238EC2B4EB77600F90E2E /* BalanceView.swift */,
+				806B36812B515F27009ABEAA /* HomeTransactionCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -154,6 +189,36 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		80F93AA72B51103C00D30361 /* Split */ = {
+			isa = PBXGroup;
+			children = (
+				80F93AA82B51104B00D30361 /* SplitRouter.swift */,
+				806B36842B5162B6009ABEAA /* SplitFlow.swift */,
+				806B36862B5162E1009ABEAA /* SplitAmountView.swift */,
+				806B36892B516326009ABEAA /* SplitInfoView.swift */,
+			);
+			path = Split;
+			sourceTree = "<group>";
+		};
+		80F93AAC2B5112E300D30361 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				80F93AAD2B5112EA00D30361 /* CustomButton.swift */,
+				80F93AB62B51257400D30361 /* CustomText.swift */,
+				80F93AB12B511CC900D30361 /* CustomInputField.swift */,
+				806B367E2B515EB9009ABEAA /* CustomAvatar.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		80F93AB52B511FD200D30361 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80F93AB32B511FCB00D30361 /* View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +305,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				806B36852B5162B6009ABEAA /* SplitFlow.swift in Sources */,
+				806B368A2B516326009ABEAA /* SplitInfoView.swift in Sources */,
+				806B36872B5162E1009ABEAA /* SplitAmountView.swift in Sources */,
 				8001D7342B4C23930065C303 /* Models.swift in Sources */,
+				80F93AA92B51104B00D30361 /* SplitRouter.swift in Sources */,
+				80F93AB22B511CC900D30361 /* CustomInputField.swift in Sources */,
 				80D238ED2B4EB77600F90E2E /* BalanceView.swift in Sources */,
+				806B368D2B516673009ABEAA /* ProfileView.swift in Sources */,
+				806B36822B515F27009ABEAA /* HomeTransactionCell.swift in Sources */,
 				80F93A792B4C29F600D30361 /* DXCore.swift in Sources */,
+				80F93AAE2B5112EA00D30361 /* CustomButton.swift in Sources */,
 				80F93A852B4C324A00D30361 /* PhoneEnterView.swift in Sources */,
 				80F93A772B4C287600D30361 /* GetStartedView.swift in Sources */,
 				8001D7272B4C16E10065C303 /* HomeListView.swift in Sources */,
@@ -251,9 +324,12 @@
 				8001D7252B4C16E10065C303 /* DXBayApp.swift in Sources */,
 				80D238FE2B4EF7B400F90E2E /* DXAuth.swift in Sources */,
 				80F93A8C2B4C387500D30361 /* PhoneVerifyView.swift in Sources */,
+				80F93AB72B51257400D30361 /* CustomText.swift in Sources */,
+				80F93AB42B511FCB00D30361 /* View.swift in Sources */,
 				80D238F82B4EF52B00F90E2E /* HomeFlow.swift in Sources */,
 				80D238FC2B4EF6E000F90E2E /* FloatingButtonView.swift in Sources */,
 				80D238F62B4EF50A00F90E2E /* HomeRouter.swift in Sources */,
+				806B367F2B515EB9009ABEAA /* CustomAvatar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
