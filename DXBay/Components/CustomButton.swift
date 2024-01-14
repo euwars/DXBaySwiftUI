@@ -99,6 +99,12 @@ struct CustomButton_Previews: PreviewProvider {
                    sizeStyle: .fit,
                    style: .destructive,
                    action: {})
+      CustomButton(label: "Get started",
+                   sizeStyle: .fill,
+                   style: .primary,
+                   image: "exclamationmark.arrow.triangle.2.circlepath",
+                   action: {})
     }
+    .safeAreaPadding()
   }
 }

@@ -53,6 +53,7 @@ struct CustomInputField_Previews: PreviewProvider {
         iconName: "envelope",
         placeholder: "Email"
       )
+      .safeAreaPadding()
     }
   }
   

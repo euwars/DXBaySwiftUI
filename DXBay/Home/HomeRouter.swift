@@ -15,6 +15,9 @@ final class HomeRouter: ObservableObject {
     case split
   }
   
+  @Namespace private var animation
+
+  
   @Published var showProfile: Bool = false
   
   @Published var navPath = NavigationPath()

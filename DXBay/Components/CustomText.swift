@@ -63,22 +63,10 @@ struct CustomText: View {
 
 #Preview {
   VStack(alignment: .center, spacing: 8) {
-    
-    
     CustomText(text: "Create an account", style: .title)
     CustomText(text: "Enter your email below to create your account", style: .body)
-    Spacer()
-      .frame(height: 10)
-    HStack(spacing: 30) {
-      CustomButton(label: "Github", sizeStyle: .fill, style: .outline, image: "gamecontroller.fill") {}
-
-      CustomButton(label: "Google", sizeStyle: .fill, style: .outline, image: "gamecontroller.fill") {}
-
-    }
-    
     CustomText(text: "Hellow", style: .subTitle)
     CustomText(text: "Hellow", style: .body)
   }
-//  .frame(maxWidth: .infinity, alignment: .leading)
   .safeAreaPadding()
 }
