@@ -13,7 +13,7 @@ struct SplitFlow: View {
   var body: some View {
     NavigationStack(path: $router.navPath) {
       
-      HomeListView()
+      SplitAmountView()
         .navigationDestination(for: HomeRouter.Destination.self) { destination in
           
         }

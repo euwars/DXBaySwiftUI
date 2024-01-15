@@ -14,11 +14,11 @@ final class HomeRouter: ObservableObject {
     case send
     case split
   }
-  
-  @Namespace private var animation
-
-  
+    
   @Published var showProfile: Bool = false
+  
+  @Published var showSplit: Bool = false
+  @Published var showSend: Bool = false
   
   @Published var navPath = NavigationPath()
   
@@ -32,6 +32,14 @@ final class HomeRouter: ObservableObject {
   
   func toggleProfile() {
     showProfile.toggle()
+  }
+  
+  func toggleSend() {
+    showSend.toggle()
+  }
+  
+  func toggleSplit() {
+    showSplit.toggle()
   }
   
   func navigateToRoot() {

@@ -32,11 +32,11 @@ struct CustomInputField: View {
     .padding(
       EdgeInsets(top: 8, leading: 14, bottom: 8, trailing: 14)
     )
-    .overlay(
-      RoundedRectangle(cornerRadius: 8)
-        .stroke(isFocused  == true ? .primaryForeground : .border,
-                lineWidth: isFocused  == true ? 2 : 0.5)
-    )
+//    .overlay(
+//      RoundedRectangle(cornerRadius: 8)
+//        .stroke(isFocused  == true ? .primaryForeground : .border,
+//                lineWidth: isFocused  == true ? 2 : 0.5)
+//    )
   }
 }
 

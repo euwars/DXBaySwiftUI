@@ -21,6 +21,13 @@ struct HomeFlow: View {
     .sheet(isPresented: $router.showProfile) {
       ProfileView()
     }
+    .sheet(isPresented: $router.showSend) {
+      ProfileView()
+    }
+    .fullScreenCover(isPresented: $router.showSplit, content: {
+      SplitFlow()
+
+    })
     .environmentObject(router)
   }
 }
@@ -28,3 +35,5 @@ struct HomeFlow: View {
 #Preview {
   HomeFlow()
 }
+
+

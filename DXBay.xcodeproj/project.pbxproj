@@ -12,6 +12,8 @@
 		8001D7292B4C16E20065C303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8001D7282B4C16E20065C303 /* Assets.xcassets */; };
 		8001D72D2B4C16E20065C303 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8001D72C2B4C16E20065C303 /* Preview Assets.xcassets */; };
 		8001D7342B4C23930065C303 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8001D7332B4C23930065C303 /* Models.swift */; };
+		802931222B53E9DC0044BFE3 /* CustomSplitStepProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802931212B53E9DC0044BFE3 /* CustomSplitStepProgressView.swift */; };
+		802931242B53EE1B0044BFE3 /* CustomFillInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802931232B53EE1B0044BFE3 /* CustomFillInputField.swift */; };
 		806B367F2B515EB9009ABEAA /* CustomAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B367E2B515EB9009ABEAA /* CustomAvatar.swift */; };
 		806B36822B515F27009ABEAA /* HomeTransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36812B515F27009ABEAA /* HomeTransactionCell.swift */; };
 		806B36852B5162B6009ABEAA /* SplitFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 806B36842B5162B6009ABEAA /* SplitFlow.swift */; };
@@ -52,6 +54,8 @@
 		8001D72A2B4C16E20065C303 /* DXBay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DXBay.entitlements; sourceTree = "<group>"; };
 		8001D72C2B4C16E20065C303 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8001D7332B4C23930065C303 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		802931212B53E9DC0044BFE3 /* CustomSplitStepProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSplitStepProgressView.swift; sourceTree = "<group>"; };
+		802931232B53EE1B0044BFE3 /* CustomFillInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFillInputField.swift; sourceTree = "<group>"; };
 		806B367E2B515EB9009ABEAA /* CustomAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatar.swift; sourceTree = "<group>"; };
 		806B36812B515F27009ABEAA /* HomeTransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTransactionCell.swift; sourceTree = "<group>"; };
 		806B36842B5162B6009ABEAA /* SplitFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitFlow.swift; sourceTree = "<group>"; };
@@ -208,7 +212,9 @@
 				80F93AAD2B5112EA00D30361 /* CustomButton.swift */,
 				80F93AB62B51257400D30361 /* CustomText.swift */,
 				80F93AB12B511CC900D30361 /* CustomInputField.swift */,
+				802931232B53EE1B0044BFE3 /* CustomFillInputField.swift */,
 				806B367E2B515EB9009ABEAA /* CustomAvatar.swift */,
+				802931212B53E9DC0044BFE3 /* CustomSplitStepProgressView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -307,6 +313,8 @@
 			files = (
 				806B36852B5162B6009ABEAA /* SplitFlow.swift in Sources */,
 				806B368A2B516326009ABEAA /* SplitInfoView.swift in Sources */,
+				802931242B53EE1B0044BFE3 /* CustomFillInputField.swift in Sources */,
+				802931222B53E9DC0044BFE3 /* CustomSplitStepProgressView.swift in Sources */,
 				806B36872B5162E1009ABEAA /* SplitAmountView.swift in Sources */,
 				8001D7342B4C23930065C303 /* Models.swift in Sources */,
 				80F93AA92B51104B00D30361 /* SplitRouter.swift in Sources */,
