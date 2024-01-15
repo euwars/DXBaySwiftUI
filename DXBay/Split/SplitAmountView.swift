@@ -11,23 +11,33 @@ struct SplitAmountView: View {
   @FocusState var isFocused
   
   @State private var amount: Decimal?
-  
-  
-  
+
   var body: some View {
     ZStack {
-      Color.black
+      Color.red
         .ignoresSafeArea()
       
       VStack {
         CustomText(text: "Enter bill amount", style: .subTitle2)
         
-        TextField("", value: $amount, format: .currency(code: "USD"))
+//        Text(amount, format: .currency(code: "GBP"))
+//        TextField("Amount", value: $amount, format: .number.precision(.fractionLength(2)))
+//            .keyboardType(.decimalPad)
+//        
+        TextField("Amount", value: $amount, format: .number.precision(.fractionLength(3)))
+          .focused($isFocused)
           .multilineTextAlignment(.center)
-          .keyboardType(.numbersAndPunctuation)
-          .contentTransition(.numericText())
+          .keyboardType(.decimalPad)
           .font(Font.system(size: 60))
+          .onAppear {
+            self.isFocused = true
+
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.75) {
+//              self.isFocused = true
+//            }
+          }
       }
+
     }
   }
 }
@@ -40,11 +50,11 @@ extension Double {
 
 struct SplitAmountView_Previews: PreviewProvider {
   struct PreviewWrapper: View {
-    @State private var inputText: String = ""
-    @FocusState var isFocused: Bool
+//    @State private var inputText: String = ""
+//    @FocusState var isFocused: Bool
     
     var body: some View {
-      SplitAmountView(isFocused: _isFocused)
+      SplitAmountView()
         .safeAreaPadding()
     }
   }
